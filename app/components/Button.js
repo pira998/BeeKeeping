@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import  {StyleSheet, TouchableOpacity}  from "react-native";
+import  {StyleSheet, TouchableOpacity,View}  from "react-native";
 import LinearGradient  from "react-native-linear-gradient";
 import theme from "../styles/themes";
 
@@ -59,8 +59,10 @@ class Button extends Component {
                 style={buttonStyles}
                 activeOpacity={opacity || 0.8}
                 {...props}
-            >
-                {children}
+            ><View>
+                    {children}
+            </View>
+                
             </TouchableOpacity>
         );
     }

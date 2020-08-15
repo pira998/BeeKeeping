@@ -110,8 +110,8 @@ class WelcomeScreen extends Component {
         return (
             <Block> 
                 <Block center bottom flex={0.3}>
-                    <Text h1 center bold>Welcome To
-                        <Text h1 primary>BeeKeeping.</Text>
+                    <Text h1 center bold>Welcome To 
+                        <Text h1 primary> BeeKeeping.</Text>
                     </Text>
                     <Text h3 gray>Enjoy the experience</Text>
                 </Block>

@@ -11,7 +11,7 @@ export default class SplashScreen extends Component {
     componentDidMount(){
         setTimeout(()=>{
             this.goToScreen('Welcome')
-        },5000,this)
+        },3000,this)
     }
 
     render() {
@@ -30,7 +30,7 @@ export default class SplashScreen extends Component {
                     source = {require('@resources/images/logo.png')}
                     
                 />
-                <Text>Bee Hive Management</Text>
+                <Text style={{fontFamily:'Poppins-Black'}}>Bee Hive Management</Text>
 
 
 
