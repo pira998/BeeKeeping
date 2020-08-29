@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, TextInput } from "react-native";
-import * as Icon from "react-native-vector-icons";
+import Icon from "react-native-vector-icons/Ionicons";
 import Button from "./Button";
 
 import Text from "./Text";
@@ -37,7 +37,7 @@ export default class Input extends Component {
                 style={styles.toggle}
                 onPress={() => this.setState({ toggleSecure: !toggleSecure })}
             >
-                {/* {rightLabel ? (
+                {rightLabel ? (
                     rightLabel
                 ) : (
                         <Icon
@@ -45,7 +45,7 @@ export default class Input extends Component {
                             size={theme.sizes.font * 1.35}
                             name={!toggleSecure ? "md-eye" : "md-eye-off"}
                         />
-                    )} */}
+                    )}
             </Button>
         );
     }

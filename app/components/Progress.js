@@ -1,11 +1,11 @@
-import React,{Component} from "react";
-import {StyleSheet} from "react-native";
-import {LinearGradient} from "react-native-linear-gradient";
+import React, { Component } from 'react';
+import { StyleSheet } from 'react-native';
+import LinearGradient  from 'react-native-linear-gradient';
 
-import Block from "./Block";
+import Block from './Block';
 
-class Progress extends Component{
-    render(){
+class Progress extends Component {
+    render() {
         const {
             startColor,
             endColor,
@@ -19,26 +19,26 @@ class Progress extends Component{
             <Block
                 row
                 center
-                color="gray2"
-                style = {[styles.background,styles]}
-                {...props}>
-                    <LinearGradient 
-                        end = {{x:1,y:0}}
-                        style = {[style.overlay,{flex:value}]}
-                        color = {[startColor,endColor]}>
+                color="gray3"
+                style={[styles.background, styles]}
+                {...props}
+            >
+                <LinearGradient
+                    end={{ x: 1, y: 0 }}
+                    style={[styles.overlay, {flex: value }]}
+                    colors={[startColor, endColor]}
+                >
                     <LinearGradient
                         end={{ x: 1, y: 0 }}
                         colors={[startColor, endColor]}
                         style={[styles.active, { flex: value }]}
                     />
-
-
-                        </LinearGradient>
-                </Block>
-        )
-
+                </LinearGradient>
+            </Block>
+        );
     }
 }
+
 Progress.defaultProps = {
     startColor: "#4F8DFD",
     endColor: "#3FE4D4",

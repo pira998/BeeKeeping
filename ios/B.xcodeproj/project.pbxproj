@@ -50,6 +50,13 @@
 		9E46CA3C23C2499688473D3F /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8290C8D850F428CB6E03B76 /* Octicons.ttf */; };
 		01B1405F3D1C433AA1CCD674 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89B50B9B53964325930649D2 /* SimpleLineIcons.ttf */; };
 		D85773AD219B48B9A9602F7D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3995DFBD496E4119B69FEF1D /* Zocial.ttf */; };
+		3681D08BB51044ECBBA08F34 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B60928A9C2C84D32BFC2EA5F /* back.png */; };
+		9F8208F9A09C4F3992337CCE /* apiaries.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7098BAFBF25348129077B1E9 /* apiaries.jpeg */; };
+		2F6851E208EA47228AF2CF95 /* bee_illustration.webp in Resources */ = {isa = PBXBuildFile; fileRef = 0FA38E9EFA98442080657073 /* bee_illustration.webp */; };
+		31B3F8CFF63B4BFF8B68AB99 /* illustration_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 43F6A520BD94422FB2367A64 /* illustration_1.png */; };
+		57E19AB706D2406E89266A67 /* illustration_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 83FEC7DE30AF49C78400534E /* illustration_2.png */; };
+		D88DDEB1034841A2A9C2B3CF /* illustration_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84924977D0F548B6B70C8C37 /* illustration_3.png */; };
+		28B7A550725C43959768BAB0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBFD7E1A5BD4BB6B946D653 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +126,13 @@
 		A8290C8D850F428CB6E03B76 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		89B50B9B53964325930649D2 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		3995DFBD496E4119B69FEF1D /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B60928A9C2C84D32BFC2EA5F /* back.png */ = {isa = PBXFileReference; name = "back.png"; path = "../app/resources/icons/back.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7098BAFBF25348129077B1E9 /* apiaries.jpeg */ = {isa = PBXFileReference; name = "apiaries.jpeg"; path = "../app/resources/images/apiaries.jpeg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0FA38E9EFA98442080657073 /* bee_illustration.webp */ = {isa = PBXFileReference; name = "bee_illustration.webp"; path = "../app/resources/images/bee_illustration.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		43F6A520BD94422FB2367A64 /* illustration_1.png */ = {isa = PBXFileReference; name = "illustration_1.png"; path = "../app/resources/images/illustration_1.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		83FEC7DE30AF49C78400534E /* illustration_2.png */ = {isa = PBXFileReference; name = "illustration_2.png"; path = "../app/resources/images/illustration_2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		84924977D0F548B6B70C8C37 /* illustration_3.png */ = {isa = PBXFileReference; name = "illustration_3.png"; path = "../app/resources/images/illustration_3.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1FBFD7E1A5BD4BB6B946D653 /* logo.png */ = {isa = PBXFileReference; name = "logo.png"; path = "../app/resources/images/logo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +277,13 @@
 				A8290C8D850F428CB6E03B76 /* Octicons.ttf */,
 				89B50B9B53964325930649D2 /* SimpleLineIcons.ttf */,
 				3995DFBD496E4119B69FEF1D /* Zocial.ttf */,
+				B60928A9C2C84D32BFC2EA5F /* back.png */,
+				7098BAFBF25348129077B1E9 /* apiaries.jpeg */,
+				0FA38E9EFA98442080657073 /* bee_illustration.webp */,
+				43F6A520BD94422FB2367A64 /* illustration_1.png */,
+				83FEC7DE30AF49C78400534E /* illustration_2.png */,
+				84924977D0F548B6B70C8C37 /* illustration_3.png */,
+				1FBFD7E1A5BD4BB6B946D653 /* logo.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -440,6 +461,13 @@
 				9E46CA3C23C2499688473D3F /* Octicons.ttf in Resources */,
 				01B1405F3D1C433AA1CCD674 /* SimpleLineIcons.ttf in Resources */,
 				D85773AD219B48B9A9602F7D /* Zocial.ttf in Resources */,
+				3681D08BB51044ECBBA08F34 /* back.png in Resources */,
+				9F8208F9A09C4F3992337CCE /* apiaries.jpeg in Resources */,
+				2F6851E208EA47228AF2CF95 /* bee_illustration.webp in Resources */,
+				31B3F8CFF63B4BFF8B68AB99 /* illustration_1.png in Resources */,
+				57E19AB706D2406E89266A67 /* illustration_2.png in Resources */,
+				D88DDEB1034841A2A9C2B3CF /* illustration_3.png in Resources */,
+				28B7A550725C43959768BAB0 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

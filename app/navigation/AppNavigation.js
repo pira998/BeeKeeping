@@ -1,15 +1,31 @@
 import React from 'react';
 import {Image,Text} from "react-native";
 import {createStackNavigator} from '@react-navigation/stack';
-// import { createBottomTabNavigator, BottomTabBar } from 'react-navigation-tabs';
-import SplashScreen from '../screens/SplashScreen';
-import LoginScreen from '../screens/LoginScreen';
-import SignupScreen from '../screens/SignupScreen';
-import WelcomeScreen from '../screens/WelcomeScreen';
-import ForgetScreen from '../screens/ForgetScreen';
+import {SplashScreen,LoginScreen,
+    SignupScreen,
+    WelcomeScreen,
+    ForgetScreen,
+    FirstScreen,
+    ApiaryScreen,
+    HiveScreen,
+    TasksScreen,
+    EditApiaryScreen,
+    WeatherScreen,
+    HivesScreen,
+    StandardInspectionScreen,
+    HarvestInspectionScreen,
+    QueenInspectionScreen,
+    TreatmentInspectionScreen,
+    OnlineInspectionScreen,
+    FeedInspectionScreen
+
+} from '../screens';
+    
+
 import TabNavigation from './TabNavigation'
 
 import themes from '../styles/themes';
+
 
 const Stack = createStackNavigator();
 
@@ -99,6 +115,115 @@ const AppNavigation =() => {
                 }}
             
             />
+            <Stack.Screen
+                name="Apiary"
+                component = {ApiaryScreen}
+                options ={{
+                    headerShown:false,
+                }}
+            />
+            <Stack.Screen  
+                name="Hive"
+                component = {HiveScreen}
+                options={{
+                    headerShown: false,
+
+                }}
+
+
+                />
+            <Stack.Screen
+                name="Hives"
+                component={HivesScreen}
+                options={{
+                    headerShown: false,
+
+                }}
+
+
+            />
+            <Stack.Screen
+                name="Tasks"
+                component={TasksScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+
+            />
+            <Stack.Screen
+                name="Weather"
+                component={WeatherScreen}
+                options={{
+                    headerShown: false,
+
+                }}
+
+
+            />
+            <Stack.Screen
+                name="EditApiary"
+                component={EditApiaryScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+
+            />
+            <Stack.Screen
+                name="StandardInspection"
+                component={StandardInspectionScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+
+            />
+            <Stack.Screen
+                name="FeedInspection"
+                component={FeedInspectionScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+
+            />
+            <Stack.Screen
+                name="QueenInspection"
+                component={QueenInspectionScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+
+            />
+            <Stack.Screen
+                name="HarvestInspection"
+                component={HarvestInspectionScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+
+            />
+            <Stack.Screen
+                name="TreatmentInspection"
+                component={TreatmentInspectionScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+            />
+            <Stack.Screen
+                name="OnlineInspection"
+                component={OnlineInspectionScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+
+            />
+           
         </Stack.Navigator>
 
     );

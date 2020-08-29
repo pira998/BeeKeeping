@@ -27,8 +27,14 @@ export default class Divider extends Component{
 export const styles = StyleSheet.create({
     divider:{
         height:0,
-        margin:theme.sizes.base*2,
+        margin:5,
         borderBottomColor: theme.colors.gray2,
-        borderBottomWidth:StyleSheet.hairlineWidth
+        borderBottomWidth:StyleSheet.hairlineWidth,
+        // borderColor:"#007AFF",
+        elevation:1,
+        borderRadius:2,
+        paddingLeft:"80%",
+        alignSelf:"center"
+        
     }
 });

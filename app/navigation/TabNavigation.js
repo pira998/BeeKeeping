@@ -1,7 +1,7 @@
 import React from 'react';
 // import { createAppContainer } from "@react-navigation/native";
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+// import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import SettingScreen from '../screens/SettingScreen'
 import ApiariesScreen from '../screens/ApiariesScreen'
 import LiveHivesScreen from '../screens/LiveHivesScreen'
@@ -14,18 +14,11 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 import themes from '../styles/themes' 
 
-const Tabs = createMaterialBottomTabNavigator();
+const Tabs = createBottomTabNavigator();
 
 const TabNavigation = () => {
     return(
-        <Tabs.Navigator
-            tabBarOptions={
-                {
-                    activeTintColor: '#cd077d',
-                    iconStyle:{}
-                }
-            }
-            >
+        <Tabs.Navigator>
             <Tabs.Screen 
                 name="Dashboard" 
                 component={DashboardScreen}

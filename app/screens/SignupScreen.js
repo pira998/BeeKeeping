@@ -42,7 +42,7 @@ export default class SignupScreen extends Component {
                     {
                         text: "Continue",
                         onPress: () => {
-                            navigation.navigate("Browse");
+                            navigation.navigate("FirstScreen");
                         }
                     }
                 ],
