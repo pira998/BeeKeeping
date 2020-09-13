@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import { Text } from '../components';
+import { Text, Button } from '../components';
 import { Block } from '../components';
+import { View } from 'react-native';
+import * as firebase from 'firebase'
 
 export default class LoginScreen extends Component {
 
+    signOut=()=>{
+        firebase.auth().signOut()
+    }
     render() {
         return (
-            <Block>
-                <Block center bottom flex={0.12}>
-                    <Text h2 center bold>Setting</Text>
-                </Block>
-            </Block>
+            <View style= {{alignContent:"center",margin:100}}>
+                
+                <Button gradient shadow onPress={this.signOut}>
+                    <Text center bold>Sign out</Text>
+                </Button>
+            </View>
         )
 
     }

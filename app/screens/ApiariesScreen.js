@@ -61,10 +61,9 @@ export default class ApiariesScreen extends Component {
                             <CardSeven
                                 title={"Vinny’s Barber"}
                                 subTitle={"852 N Virgil Ave, Beverly Hills"}
-                                image={{
-                                    uri:
-                                        "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                                }}
+                                image={
+                                        require('../resources/images/apiaries.jpeg')
+                                }
                                 icon1={"share"}
                                 iconColor1={"#fff"}
                                 iconBackground1={"purple"}

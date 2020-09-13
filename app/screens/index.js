@@ -16,6 +16,8 @@ import HarvestInspectionScreen from './InspectionScreen.js/HarvestInspectionScre
 import QueenInspectionScreen from './InspectionScreen.js/QueenInspectionScreen'
 import TreatmentInspectionScreen from './InspectionScreen.js/TreatmentInspectionScreen'
 import OnlineInspectionScreen from './InspectionScreen.js/OnlineInspectionScreen'
+import SecondScreen from './SecondScreen'
+import SampleScreen from './SampleScreen'
 
 
 export  {SplashScreen,
@@ -35,7 +37,9 @@ export  {SplashScreen,
                 QueenInspectionScreen,
                 TreatmentInspectionScreen,
                 OnlineInspectionScreen,
-                FeedInspectionScreen
+                FeedInspectionScreen,
+                SecondScreen,
+                SampleScreen
             }
 
 

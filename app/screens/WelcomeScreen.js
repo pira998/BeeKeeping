@@ -5,10 +5,19 @@ import  {Block,Text}  from '../components';
 import theme from "../styles/themes";
 import Button from '../components/Button';
 // import { ScrollView } from 'react-native-gesture-handler';
+import * as firebase from 'firebase'
+
 
 const {width,height} = Dimensions.get('window')
 
 class WelcomeScreen extends Component {
+
+    componentDidMount(){
+        firebase.auth().onAuthStateChanged(user =>{
+            this.props.navigation.navigate(user ? "TabNavigation" : "Welcome")
+        })
+    }
+
 
     scrollX = new Animated.Value(0);
 

@@ -66,7 +66,7 @@ export default class Input extends Component {
     }
 
     render() {
-        const { email, phone, number, secure, error, style,placeholder, ...props } = this.props;
+        const { email, phone, number, secure, error, style,placeholder, autoComplete, ...props } = this.props;
 
         const { toggleSecure } = this.state;
         const isSecure = toggleSecure ? false : secure;
@@ -92,7 +92,7 @@ export default class Input extends Component {
                     style={inputStyles}
                     placeholder={placeholder}
                     secureTextEntry={isSecure}
-                    autoComplete="off"
+                    autoComplete={autoComplete}
                     autoCapitalize="none"
                     autoCorrect={false}
                     keyboardType={inputType}

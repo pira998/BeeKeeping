@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import propTypes from 'prop-types'
 import { scale, verticalScale, moderateScale } from "react-native-size-matters";
-import PercentageCircle from 'react-native-percentage-circle';
+
 
 import Icon from "react-native-vector-icons/FontAwesome";
 

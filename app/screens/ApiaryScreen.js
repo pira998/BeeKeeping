@@ -38,8 +38,8 @@ export default class ApiaryScreen extends Component {
             <SafeAreaView style={styles.container}>
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={styles.titleBar}>
-                        <Ionicons name='chevron-back' size={24} color="#007AFF" onPress={()=>this.goToApiaries()}></Ionicons>
-                        <MaterialIcons name='more-vert' size={24} color="#007AFF" onPress={()=>this.goToEditApiary()}></MaterialIcons>
+                        <Ionicons name='chevron-back' size={24} color="#000" onPress={()=>this.goToApiaries()}></Ionicons>
+                        <MaterialIcons name='more-vert' size={24} color="#000" onPress={()=>this.goToEditApiary()}></MaterialIcons>
 
                     </View>
                     <View style={{ alignSelf: "center", height: 216, }}>
@@ -60,20 +60,20 @@ export default class ApiaryScreen extends Component {
                             <TouchableOpacity onPress={()=>this.goToHive()} activeOpacity={1}>
                                 <View style={[styles.count, { alignSelf: "center" }]} >
                                     <View style={styles.cardIcon} flexDirection="row">
-                                        <Octicons name="archive" size={36} color="#41444B" onPress={() => alert("Edit Photo")} />
+                                        <Octicons name="archive" size={36} color="#000" onPress={() => alert("Edit Photo")} />
                                     </View>
-                                    <Text style={[styles.text, { fontSize: 50, color: "#DFD8C8" }]}>990</Text>
-                                    <Text style={[styles.text, { fontSize: 20, color: "#DFD8C8", textTransform: "uppercase" }]}>Hives</Text>
+                                    <Text style={[styles.text, { fontSize: 50, color: "#000" }]}>990</Text>
+                                    <Text style={[styles.text, { fontSize: 20, color: "#000", textTransform: "uppercase" }]}>Hives</Text>
                                 </View>
                             </TouchableOpacity>
                             
                             <TouchableOpacity onPress={()=>this.goToTasks()} activeOpacity={1}>
                                 <View style={[styles.count, { alignSelf: "center" }]} >
                                     <View style={styles.cardIcon} flexDirection="row">
-                                        <Octicons name="archive" size={36} color="#41444B" onPress={() => alert("Edit Photo")} />
+                                        <Octicons name="archive" size={36} color="#000" onPress={() => alert("Edit Photo")} />
                                     </View>
-                                    <Text style={[styles.text, { fontSize: 50, color: "#DFD8C8" }]}>199</Text>
-                                    <Text style={[styles.text, { fontSize: 20, color: "#DFD8C8", textTransform: "uppercase" }]}>Tasks</Text>
+                                    <Text style={[styles.text, { fontSize: 50, color: "#000" }]}>199</Text>
+                                    <Text style={[styles.text, { fontSize: 20, color: "#000", textTransform: "uppercase" }]}>Tasks</Text>
                                 </View>
 
 
@@ -84,8 +84,8 @@ export default class ApiaryScreen extends Component {
                                     <View style={styles.cardIcon} flexDirection="row">
                                         <Octicons name="archive" size={36} color="#41444B" onPress={() => alert("Edit Photo")} />
                                     </View>
-                                    <Text style={[styles.text, { fontSize: 50, color: "#DFD8C8" }]}>290</Text>
-                                    <Text style={[styles.text, { fontSize: 20, color: "#DFD8C8", textTransform: "uppercase" }]}>Weather</Text>
+                                    <Text style={[styles.text, { fontSize: 50, color: "#000" }]}>290</Text>
+                                    <Text style={[styles.text, { fontSize: 20, color: "#000", textTransform: "uppercase" }]}>Weather</Text>
                                 </View>
 
                             </TouchableOpacity>
@@ -95,8 +95,8 @@ export default class ApiaryScreen extends Component {
                                     <View style={styles.cardIcon} flexDirection="row">
                                         <Octicons name="archive" size={36} color="#41444B" onPress={() => alert("Edit Photo")} />
                                     </View>
-                                    <Text style={[styles.text, { fontSize: 50, color: "#DFD8C8" }]}>390</Text>
-                                    <Text style={[styles.text, { fontSize: 20, color: "#DFD8C8", textTransform: "uppercase" }]}>Strength</Text>
+                                    <Text style={[styles.text, { fontSize: 50, color: "#000" }]}>390</Text>
+                                    <Text style={[styles.text, { fontSize: 20, color: "#000", textTransform: "uppercase" }]}>Strength</Text>
                                 </View>
                             </TouchableOpacity>
 
@@ -105,24 +105,62 @@ export default class ApiaryScreen extends Component {
                                     <View style={styles.cardIcon} flexDirection="row">
                                         <Octicons name="archive" size={36} color="#41444B" onPress={() => alert("Edit Photo")} />
                                     </View>
-                                    <Text style={[styles.text, { fontSize: 50, color: "#DFD8C8" }]}>290</Text>
-                                    <Text style={[styles.text, { fontSize: 20, color: "#DFD8C8", textTransform: "uppercase" }]}>Feeding</Text>
+                                    <Text style={[styles.text, { fontSize: 50, color: "#000" }]}>290</Text>
+                                    <Text style={[styles.text, { fontSize: 20, color: "#000", textTransform: "uppercase" }]}>Feeding</Text>
                                 </View>
                             </TouchableOpacity>
                             
                         </ScrollView>
                     </View>
-                    <Text style={{ fontFamily: "Poppins-Regular", marginLeft: 20, color: "#777" }}>Recent Activities</Text>
-
-                    <View style={[styles.recentItemContainer, { padding: 15 }]}>
+                    <Text style={{ fontFamily: "Poppins-Regular", margin: 20, color: "#777" }}>Recent Activities</Text>
 
 
-                        <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
-                        <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
-                        <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
-                        <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
-                        <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
-                        <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
+                    <View style={[styles.recentItemContainer, { flexDirection: "row", justifyContent: 'space-evenly' }]}>
+
+                        <Ionicons name='checkmark-done-circle' size={24} color="#000" style={{ marginRight: 5, marginLeft: 0 }}></Ionicons>
+                        <View>
+                            <Text style={[styles.text, { color: "#000", fontSize: 12 }]}>Colony Inspection </Text>
+                            <Text style={[styles.text, { color: "#777", fontSize: 9 }]}>An hour ago</Text>
+
+                        </View>
+                        <TouchableOpacity><Text style={[styles.text, { color: "#000", fontSize: 12 }]}>#Hive_Id</Text></TouchableOpacity>
+
+
+                    </View>
+                    <View style={[styles.recentItemContainer, { flexDirection: "row", justifyContent: 'space-evenly' }]}>
+
+                        <Ionicons name='checkmark-done-circle' size={24} color="#000" style={{ marginRight: 5, marginLeft: 0 }}></Ionicons>
+                        <View>
+                            <Text style={[styles.text, { color: "#000", fontSize: 12 }]}>Colony Inspection </Text>
+                            <Text style={[styles.text, { color: "#777", fontSize: 9 }]}>An hour ago</Text>
+
+                        </View>
+                        <TouchableOpacity><Text style={[styles.text, { color: "#000", fontSize: 12 }]}>#Hive_Id</Text></TouchableOpacity>
+
+
+                    </View>
+                    <View style={[styles.recentItemContainer, { flexDirection: "row", justifyContent: 'space-evenly' }]}>
+
+                        <Ionicons name='checkmark-done-circle' size={24} color="#000" style={{ marginRight: 5, marginLeft: 0 }}></Ionicons>
+                        <View>
+                            <Text style={[styles.text, { color: "#000", fontSize: 12 }]}>Colony Inspection </Text>
+                            <Text style={[styles.text, { color: "#777", fontSize: 9 }]}>An hour ago</Text>
+
+                        </View>
+                        <TouchableOpacity><Text style={[styles.text, { color: "#000", fontSize: 12 }]}>#Hive_Id</Text></TouchableOpacity>
+
+
+                    </View>
+                    <View style={[styles.recentItemContainer, { flexDirection: "row", justifyContent: 'space-evenly' }]}>
+
+                        <Ionicons name='checkmark-done-circle' size={24} color="#000" style={{ marginRight: 5, marginLeft: 0 }}></Ionicons>
+                        <View>
+                            <Text style={[styles.text, { color: "#000", fontSize: 12 }]}>Colony Inspection </Text>
+                            <Text style={[styles.text, { color: "#777", fontSize: 9 }]}>An hour ago</Text>
+
+                        </View>
+                        <TouchableOpacity><Text style={[styles.text, { color: "#000", fontSize: 12 }]}>#Hive_Id</Text></TouchableOpacity>
+
 
                     </View>
 
@@ -182,16 +220,18 @@ const styles = StyleSheet.create({
     },
     count: {
         backgroundColor: "#fff",
-        marginTop: 20,
-        marginBottom: 20,
-        marginLeft: 10,
-        marginRight:10,
+        marginTop: 10,
+        marginBottom: 10,
+        marginLeft: 20,
+        marginRight: 10,
         width: 180,
         height: 180,
         alignItems: "center",
         justifyContent: "center",
         borderRadius: 12,
         elevation: 5,
+        borderWidth: 2,
+        borderColor: "#ffd900"
 
 
 
@@ -204,7 +244,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         elevation: 20,
-        shadowColor: "#777",
+        shadowColor: "#ffd900",
 
     },
     event: {
@@ -217,11 +257,19 @@ const styles = StyleSheet.create({
 
     },
     recentItemContainer: {
-        alignItems: "flex-start",
+        alignItems: "center",
         backgroundColor: "#fff",
         margin: 20,
         marginTop: 0,
         elevation: 5,
         borderRadius: 12,
+        justifyContent: "center",
+        padding: 10,
+        borderWidth: 1,
+        borderColor: "#ffd900"
+
+
+
+
     }
 })

@@ -9,12 +9,14 @@ import {
 
 import { Button, Block, Input, Text } from "../components";
 import theme from "../styles/themes";
+import * as firebase from 'firebase'
+
 
 export default class SignupScreen extends Component {
     state = {
-        email: null,
-        username: null,
-        password: null,
+        email: "",
+        username: "",
+        password: "",
         errors: [],
         loading: false
     };
@@ -28,6 +30,18 @@ export default class SignupScreen extends Component {
         this.setState({ loading: true });
 
         // check with backend API or with some static data
+        firebase
+            .auth()
+            .createUserWithEmailAndPassword(this.state.email,this.state.password)
+            .then(userCredentials=>{
+                return userCredentials.user.updateProfile(
+                    {displayName:this.state.username}
+                )
+            })
+            .catch(error=>{
+                errors.push(error)
+            })
+
         if (!email) errors.push("email");
         if (!username) errors.push("username");
         if (!password) errors.push("password");
@@ -42,7 +56,7 @@ export default class SignupScreen extends Component {
                     {
                         text: "Continue",
                         onPress: () => {
-                            navigation.navigate("FirstScreen");
+                            navigation.navigate("TabNavigation");
                         }
                     }
                 ],

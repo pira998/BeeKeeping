@@ -1,9 +1,113 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View,Image } from 'react-native'
+import { Text, StyleSheet, View,Image,Modal,TouchableHighlight } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
 export default class StandardInspectionScreen extends Component {
+
+    state = {
+        modalVisible: false,
+        population:"Population",
+        mood:"mood",
+        fitness:"Fitness",
+        hiveBodies:"Hive Bodies",
+        frames:"Frame",
+        broodPattern:"Brood Pattern",
+        problems:"Problems",
+        hivemodification:"Hive Modification"
+    };
+    setPopulation = (population) =>{
+        this.setState({population:population})
+    }
+
+    setModalVisible = (visible) => {
+        this.setState({ modalVisible: visible });
+    }
+
+    renderPopulation() {
+        const { modalVisible } = this.state;
+        return (
+            <View style={styles.centeredView}>
+                <Modal
+                    animationType="slide"
+                    transparent={false}
+                    visible={modalVisible}
+                    onRequestClose={() => {
+                        Alert.alert("Modal has been closed.");
+                    }}
+                >
+                    <View style={styles.centeredView}>
+                        <View style={styles.modalView}>
+                            <Text style={styles.modalText}>Hello World!</Text>
+                            <View style={styles.optionContainer}>
+                                <View style={styles.optionBar}>
+                                    <TouchableHighlight
+
+                                        onPress={() => {
+                                            this.setPopulation("Low");
+                                            this.setModalVisible(!modalVisible);
+                                        }}
+                                    >
+                                        <View style={styles.row}>
+                                            <View style={styles.option}>
+                                                <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                            </View>
+                                            <Text style={styles.optionTitle}> Low </Text>
+                                        </View>
+                                    </TouchableHighlight>
+
+                                    <View style={styles.row}>
+                                        <View style={styles.option}>
+                                            <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                        </View>
+                                        <Text style={styles.optionTitle}> Low-Medium </Text>
+                                    </View>
+                                    <View style={styles.row}>
+                                        <View style={styles.option}>
+                                            <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                        </View>
+                                        <Text style={styles.optionTitle}> Medium </Text>
+                                    </View>
+
+                                </View>
+                                <View style={styles.optionBar}>
+                                    <View style={styles.row}>
+                                        <View style={styles.option}>
+                                            <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                        </View>
+                                        <Text style={styles.optionTitle}> Medium-Full </Text>
+                                    </View>
+                                    <View style={styles.row}>
+                                        <View style={styles.option}>
+                                            <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                        </View>
+                                        <Text style={styles.optionTitle}> Full </Text>
+                                    </View>
+                                    
+
+                                </View>
+                                
+                            </View>
+                            <TouchableHighlight
+                                style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
+                                onPress={() => {
+                                    this.setModalVisible(!modalVisible);
+                                }}
+                            >
+                                <Text style={styles.textStyle}>Hide Modal</Text>
+                            </TouchableHighlight>
+                        </View>
+                    </View>
+                </Modal>
+
+               
+            </View>
+        );
+    }
+
+
+
+
     render() {
         return (
             <View style={styles.container}>
@@ -28,63 +132,122 @@ export default class StandardInspectionScreen extends Component {
                 </View>
                 <View style={styles.optionContainer}>
                     <View style={styles.optionBar}>
-                    <View style={styles.row}>
-                            <View style={styles.option}>
-                                <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                        <TouchableHighlight
+                            
+                            onPress={() => {
+                                this.setModalVisible(true);
+                            }}
+                        >
+                            <View style={styles.row}>
+                                <View style={styles.option}>
+                                    <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                </View>
+                                <Text style={styles.optionTitle}> {this.state.population} </Text>
                             </View>
-                            <Text style={styles.optionTitle}> Standard </Text>
-                    </View>
-                        <View style={styles.row}>
-                            <View style={styles.option}>
-                                <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                        </TouchableHighlight>
+                   
+                        <TouchableHighlight
+
+                            onPress={() => {
+                                this.setModalVisible(true);
+                            }}
+                        >
+                            <View style={styles.row}>
+                                <View style={styles.option}>
+                                    <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                </View>
+                                <Text style={styles.optionTitle}> Mood </Text>
                             </View>
-                            <Text style={styles.optionTitle}> Standard </Text>
-                        </View>
-                        <View style={styles.row}>
-                            <View style={styles.option}>
-                                <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                        </TouchableHighlight>        
+                        <TouchableHighlight
+
+                            onPress={() => {
+                                this.setModalVisible(true);
+                            }}
+                        >
+                            <View style={styles.row}>
+                                <View style={styles.option}>
+                                    <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                </View>
+                                <Text style={styles.optionTitle}> Standard </Text>
                             </View>
-                            <Text style={styles.optionTitle}> Standard </Text>
-                        </View>
-                        
+                        </TouchableHighlight>
                     </View>
                     <View style={styles.optionBar}>
-                        <View style={styles.row}>
-                            <View style={styles.option}>
-                                <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
-                            </View>
-                            <Text style={styles.optionTitle}> Standard </Text>
-                        </View>
-                        <View style={styles.row}>
-                            <View style={styles.option}>
-                                <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
-                            </View>
-                            <Text style={styles.optionTitle}> Standard </Text>
-                        </View>
-                        <View style={styles.row}>
-                            <View style={styles.option}>
-                                <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
-                            </View>
-                            <Text style={styles.optionTitle}> Standard </Text>
-                        </View>
+                        <TouchableHighlight
 
+                            onPress={() => {
+                                this.setModalVisible(true);
+                            }}
+                        >
+                            <View style={styles.row}>
+                                <View style={styles.option}>
+                                    <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                </View>
+                                <Text style={styles.optionTitle}> Standard </Text>
+                            </View>
+                        </TouchableHighlight>
+
+                        <TouchableHighlight
+
+                            onPress={() => {
+                                this.setModalVisible(true);
+                            }}
+                        >
+                            <View style={styles.row}>
+                                <View style={styles.option}>
+                                    <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                </View>
+                                <Text style={styles.optionTitle}> Standard </Text>
+                            </View>
+                        </TouchableHighlight>
+                        <TouchableHighlight
+
+                            onPress={() => {
+                                this.setModalVisible(true);
+                            }}
+                        >
+                            <View style={styles.row}>
+                                <View style={styles.option}>
+                                    <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                </View>
+                                <Text style={styles.optionTitle}> Standard </Text>
+                            </View>
+                        </TouchableHighlight>
                     </View>
                     <View style={styles.optionBar}>
-                        <View style={styles.row}>
-                            <View style={styles.option}>
-                                <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
-                            </View>
-                            <Text style={styles.optionTitle}> Standard </Text>
-                        </View>
-                        <View style={styles.row}>
-                            <View style={styles.option}>
-                                <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
-                            </View>
-                            <Text style={styles.optionTitle}> Standard </Text>
-                        </View>
+                        <TouchableHighlight
 
+                            onPress={() => {
+                                this.setModalVisible(true);
+                            }}
+                        >
+                            <View style={styles.row}>
+                                <View style={styles.option}>
+                                    <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                </View>
+                                <Text style={styles.optionTitle}> Standard </Text>
+                            </View>
+                        </TouchableHighlight>
+
+                        <TouchableHighlight
+
+                            onPress={() => {
+                                this.setModalVisible(true);
+                            }}
+                        >
+                            <View style={styles.row}>
+                                <View style={styles.option}>
+                                    <Image source={require('../../resources/icons/bee-black.png')} style={{ height: 50, width: 50, alignSelf: "center" }} />
+                                </View>
+                                <Text style={styles.optionTitle}> Standard </Text>
+                            </View>
+                        </TouchableHighlight>
+                     
                     </View>
-                    
+
+
+                    {this.renderPopulation()}
                 </View>
                 <View style={styles.footerBar}>
                     {/* <View style={styles.titleBar}> */}
@@ -120,7 +283,8 @@ const styles = StyleSheet.create({
         backgroundColor:"#fff",
         // height:100,
         elevation:10,
-        shadowColor:"#777"
+        shadowColor:"#777",
+        
     },
     optionBar:{
         flexDirection:"row",
@@ -156,7 +320,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         elevation: 20,
-        margin: 15
+        margin: 15,
+        marginTop: 30,
     },
     title:{
         alignItems: "center",
@@ -166,7 +331,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         borderRadius: 80/2,
         elevation: 20,
-        margin:15
+        margin: 15,
+        marginTop: 30,
   
     },
     note:{
@@ -177,7 +343,8 @@ const styles = StyleSheet.create({
         width: 50,
         margin: 15,
         borderRadius: 25,
-        elevation: 20
+        elevation: 20,
+        marginTop: 30,
     },
     headerTitle:{
         fontFamily:"Poppins-Regular",
@@ -219,6 +386,41 @@ const styles = StyleSheet.create({
         borderRadius: 80 / 2,
         elevation: 20,
         margin:20 
+    }, centeredView: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 22
+    },
+    modalView: {
+        margin: 20,
+        backgroundColor: "white",
+        borderRadius: 20,
+        padding: 35,
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5
+    },
+    openButton: {
+        backgroundColor: "#F194FF",
+        borderRadius: 20,
+        padding: 10,
+        elevation: 2
+    },
+    textStyle: {
+        color: "white",
+        fontWeight: "bold",
+        textAlign: "center"
+    },
+    modalText: {
+        marginBottom: 15,
+        textAlign: "center"
     }
 
 })

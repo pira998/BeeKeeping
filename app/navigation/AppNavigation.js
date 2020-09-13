@@ -1,7 +1,9 @@
 import React from 'react';
 import {Image,Text} from "react-native";
 import {createStackNavigator} from '@react-navigation/stack';
-import {SplashScreen,LoginScreen,
+import {
+    SplashScreen,
+    LoginScreen,
     SignupScreen,
     WelcomeScreen,
     ForgetScreen,
@@ -17,7 +19,9 @@ import {SplashScreen,LoginScreen,
     QueenInspectionScreen,
     TreatmentInspectionScreen,
     OnlineInspectionScreen,
-    FeedInspectionScreen
+    FeedInspectionScreen,
+    SecondScreen,
+    SampleScreen
 
 } from '../screens';
     
@@ -25,6 +29,22 @@ import {SplashScreen,LoginScreen,
 import TabNavigation from './TabNavigation'
 
 import themes from '../styles/themes';
+import * as firebase from 'firebase'
+
+var firebaseConfig = {
+    apiKey: "AIzaSyBJW4swfwzTJxgpzv3pMuqcnd-7OPv_mGo",
+    authDomain: "beeapp-30ce4.firebaseapp.com",
+    databaseURL: "https://beeapp-30ce4.firebaseio.com",
+    projectId: "beeapp-30ce4",
+    storageBucket: "beeapp-30ce4.appspot.com",
+    messagingSenderId: "197911033206",
+    appId: "1:197911033206:web:a04a7e8272ce66f4ac7657",
+    measurementId: "G-CTZQMH85CQ"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
 
 
 const Stack = createStackNavigator();
@@ -33,7 +53,7 @@ const AppNavigation =() => {
 
     return(
 
-        <Stack.Navigator initialRouteName="Splash">
+        <Stack.Navigator initialRouteName="First">
             <Stack.Screen
                 name="Splash"
                 component={SplashScreen}
@@ -217,6 +237,33 @@ const AppNavigation =() => {
             <Stack.Screen
                 name="OnlineInspection"
                 component={OnlineInspectionScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+
+            />
+            <Stack.Screen
+                name="First"
+                component={FirstScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+
+            />
+            <Stack.Screen
+                name="Second"
+                component={SecondScreen}
+                options={{
+                    headerShown: false,
+                }}
+
+
+            />
+            <Stack.Screen
+                name="Sample"
+                component={SampleScreen}
                 options={{
                     headerShown: false,
                 }}

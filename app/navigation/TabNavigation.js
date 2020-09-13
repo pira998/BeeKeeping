@@ -13,40 +13,49 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 import themes from '../styles/themes' 
+import { color } from 'react-native-reanimated';
 
 const Tabs = createBottomTabNavigator();
 
 const TabNavigation = () => {
     return(
-        <Tabs.Navigator>
+        <Tabs.Navigator
+            tabBarOptions={{
+                tabStyle:{backgroundColor:"#000"},
+                
+                
+            }}
+           
+        >
             <Tabs.Screen 
                 name="Dashboard" 
                 component={DashboardScreen}
                 options={{
-                    tabBarIcon: () => <Entypo name="home" size={25}/>
+                    tabBarIcon: () => <Entypo name="home" size={25} color="#fff"/>
                 }}
                 />
             <Tabs.Screen 
                 name="Apiaries" 
                 component ={ApiariesScreen}
                 options={{
-                    tabBarIcon: () => <Entypo name="archive" size={25}/>
+                    tabBarIcon: () => <Entypo name="archive" size={25} color="#fff"/>
                 }}
                 />
+            <Tabs.Screen
+                name="LiveHives"
+                component={LiveHivesScreen}
+                options={{
+                    tabBarIcon: ({ focused, horizontal, tintColor }) => <FontAwesome name="forumbee" size={25} color="#fff"  />
+                }}
+            />
             <Tabs.Screen 
                 name="Setting" 
                 component={SettingScreen} 
                 options={{
-                    tabBarIcon: ({ focused, horizontal, tintColor }) => <AntDesign name="setting" size={25} tintColor='#cd077d'/>
+                    tabBarIcon: ({ focused, horizontal, tintColor }) => <AntDesign name="setting" size={25} color="#fff"/>
                 }}   
                 />
-            <Tabs.Screen 
-                name="LiveHives" 
-                component={LiveHivesScreen}
-                options={{
-                    tabBarIcon: ({ focused, horizontal, tintColor }) => <FontAwesome name="forumbee" size={25} activeTintColor='#cd077d'active={focused}/>
-                }}
-                 />
+            
         </Tabs.Navigator>
     )
 }

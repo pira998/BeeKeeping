@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {
+import {View,
     ActivityIndicator,
     Keyboard,
     KeyboardAvoidingView,
@@ -8,48 +8,50 @@ import {
 
 import { Button, Block, Input, Text } from "../components";
 import  theme  from "../styles/themes";
+import * as firebase from "firebase"
 
-const VALID_EMAIL = "Veensiva10@gmail.com";
-const VALID_PASSWORD = "subscribe";
+const VALID_EMAIL = "";
+const VALID_PASSWORD = "";
 
 
 export default class LoginScreen extends Component {
     state = {
         email: VALID_EMAIL,
         password: VALID_PASSWORD,
-        errors: [],
+        errors: null,
         loading: false
     };
     
 
     handleLogin() {
+        
         const { navigation } = this.props;
-        const { email, password } = this.state;
-        const errors = [];
+        const { email, password,loading,errors } = this.state;
+       
 
         Keyboard.dismiss();
         
         this.setState({ loading: true });
 
         // check with backend API or with some static data
-        if (email !== VALID_EMAIL) {
-            errors.push("email");
-        }
-        if (password !== VALID_PASSWORD) {
-            errors.push("password");
-        }
 
-        this.setState({ errors, loading: false });
+        firebase
+            .auth()
+            .createUserWithEmailAndPassword(email,password)
+            .catch(error => {this.setState({loading: false})
+                    this.setState({errors:error})
+        })
+        
 
-        if (!errors.length) {
+        if (!errors) {
             navigation.navigate('TabNavigation');
         }
     }
 
     render() {
         const { navigation } = this.props;
-        const { loading, errors } = this.state;
-        const hasErrors = key => (errors.includes(key) ? styles.hasErrors : null);
+        const { loading,errors} = this.state;
+        const hasErrors = () => (errors ? styles.hasErrors : null);
         const keyboardVerticalOffset = Platform.OS === 'ios' ? 40 : -55
         return (
             
@@ -61,20 +63,19 @@ export default class LoginScreen extends Component {
           </Text>
                     </Block>
                     <Block flex={0.2}>
-
+                        
                         
                         <Input
                             placeholder="Email"
-                            error={hasErrors("email")}
-                            style={[styles.input, hasErrors("email")]}
+                            
+                            style={[styles.input, hasErrors()]}
                             defaultValue={this.state.email}
                             onChangeText={text => this.setState({ email: text })}
                         />
                         <Input
                             secure
                             placeholder="Password"
-                            error={hasErrors("password")}
-                            style={[styles.input, hasErrors("password")]}
+                            style={[styles.input, hasErrors()]}
                             defaultValue={this.state.password}
                             onChangeText={text => this.setState({ password: text })}
                         />

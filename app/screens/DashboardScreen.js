@@ -14,68 +14,99 @@ export default class DashboardScreen extends Component {
             <SafeAreaView style={styles.container}>
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={styles.titleBar}>
-                        <Ionicons name='chevron-back' size={24} color="#007AFF"></Ionicons>
-                        <MaterialIcons name='more-vert' size={24} color="#007AFF"></MaterialIcons>
+                        <Ionicons name='chevron-back' size={24} color="#000"></Ionicons>
+                        <Text style={[{fontSize: 20,fontFamily:"Poppins-Bold" }]}>BeeHappy DashBoard</Text>
+                        <MaterialIcons name='more-vert' size={24} color="#000"></MaterialIcons>
 
                     </View>
-                    <View style={{alignSelf:"center",height:216,}}>
-                        <View style={styles.profileImage}>
-                            <Image source={require('../resources/images/apiaries.jpeg')} style={styles.image} resizeMode="cover"/>
-                        </View>
-                        <View style= {styles.add}>   
-                                <Ionicons name="add" size={48} color="#FFF" style={{ marginLeft: 3 }} onPress={() => alert("Edit Photo")}/>
-                        </View>
                 
-                    </View>
                     <View style={styles.infoContainer}>
-                        <Text style={[styles.text, { fontWeight: "100", fontSize: 25 }]}>Jaffna_Apiary</Text>
-                        <Text style={[styles.text, { fontWeight: "100", fontSize: 15, color:"#C5CCD6" }]}>#2321</Text>
+                        
+    
                     </View>
                     <View style = {{alignItems:"center"}}>
                         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                            <View style={[styles.count, { alignSelf: "center" }]} >
+                                <View style={styles.cardIcon} flexDirection="row">
+                                    <Octicons name="archive" size={36} color="#000" onPress={() => alert("Edit Photo")} />
+                                </View>
+                                <Text style={[styles.text, { fontSize: 50, color: "#000" }]}>290</Text>
+                                <Text style={[styles.text, { fontSize: 20, color: "#000", textTransform: "uppercase" }]}>Apiaries</Text>
+                            </View>
                             <View style={[styles.count, { alignSelf: "center"}]} >
                                     <View style={styles.cardIcon} flexDirection="row">
-                                    <Octicons name="archive" size={36} color="#41444B" onPress={() => alert("Edit Photo")} />
+                                    <Octicons name="archive" size={36} color="#000" onPress={() => alert("Edit Photo")} />
                                     </View>
-                                    <Text style={[styles.text, { fontSize: 50, color: "#DFD8C8" }]}>990</Text>
-                                <Text style={[styles.text, { fontSize: 20, color: "#DFD8C8", textTransform: "uppercase" }]}>Hives</Text>
+                                    <Text style={[styles.text, { fontSize: 50, color: "#000" }]}>990</Text>
+                                <Text style={[styles.text, { fontSize: 20, color: "#000", textTransform: "uppercase" }]}>Hives</Text>
                             </View>
                             <View style={[styles.count, { alignSelf: "center" }]} >
                                 <View style={styles.cardIcon} flexDirection="row">
-                                    <Octicons name="archive" size={36} color="#41444B" onPress={() => alert("Edit Photo")} />
+                                    <Octicons name="archive" size={36} color="#000" onPress={() => alert("Edit Photo")} />
                                 </View>
-                                <Text style={[styles.text, { fontSize: 50, color: "#DFD8C8" }]}>199</Text>
-                                <Text style={[styles.text, { fontSize: 20, color: "#DFD8C8", textTransform: "uppercase" }]}>Tasks</Text>
+                                <Text style={[styles.text, { fontSize: 50, color: "#000" }]}>199</Text>
+                                <Text style={[styles.text, { fontSize: 20, color: "#000", textTransform: "uppercase" }]}>Tasks</Text>
                             </View>
+                           
                             <View style={[styles.count, { alignSelf: "center" }]} >
                                 <View style={styles.cardIcon} flexDirection="row">
-                                    <Octicons name="archive" size={36} color="#41444B" onPress={() => alert("Edit Photo")} />
+                                    <Octicons name="archive" size={36} color="#000" onPress={() => alert("Edit Photo")} />
                                 </View>
-                                <Text style={[styles.text, { fontSize: 50, color: "#DFD8C8" }]}>290</Text>
-                                <Text style={[styles.text, { fontSize: 20, color: "#DFD8C8", textTransform: "uppercase" }]}>Weather</Text>
-                            </View>
-                            <View style={[styles.count, { alignSelf: "center" }]} >
-                                <View style={styles.cardIcon} flexDirection="row">
-                                    <Octicons name="archive" size={36} color="#41444B" onPress={() => alert("Edit Photo")} />
-                                </View>
-                                <Text style={[styles.text, { fontSize: 50, color: "#DFD8C8" }]}>390</Text>
-                                <Text style={[styles.text, { fontSize: 20, color: "#DFD8C8", textTransform: "uppercase" }]}>Strength</Text>
+                                <Text style={[styles.text, { fontSize: 50, color: "#000" }]}>390</Text>
+                                <Text style={[styles.text, { fontSize: 20, color: "#000", textTransform: "uppercase" }]}>Honey</Text>
                             </View>
                         </ScrollView>
                     </View>
                     <Text style={{ fontFamily: "Poppins-Regular",marginLeft:20,color:"#777" }}>Recent Activities</Text>
 
-                      <View style={[styles.recentItemContainer,{padding:15}]}>
+                    <View style={[styles.recentItemContainer, {flexDirection: "row",justifyContent:'space-evenly'}]}>
 
-                        
-                            <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
-                            <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
-                            <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
-                        <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
-                        <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
-                        <Text style={styles.text}>hi i am good programmer. I can do many things but i have bad habits. That is a hardWork. </Text>
+                        <Ionicons name='checkmark-done-circle' size={24} color="#000" style={{marginRight:5,marginLeft:0}}></Ionicons>
+                        <View>
+                            <Text style={[styles.text, { color: "#000", fontSize: 12 }]}>Colony Inspection </Text>
+                            <Text style={[styles.text, { color: "#777", fontSize: 9 }]}>An hour ago</Text>
 
+                        </View>
+                        <TouchableOpacity><Text style={[styles.text, { color: "#000", fontSize: 12 }]}>#Hive_Id</Text></TouchableOpacity>
+
+                    
                       </View>
+                    <View style={[styles.recentItemContainer, { flexDirection: "row", justifyContent: 'space-evenly' }]}>
+
+                        <Ionicons name='checkmark-done-circle' size={24} color="#000" style={{ marginRight: 5, marginLeft: 0 }}></Ionicons>
+                        <View>
+                            <Text style={[styles.text, { color: "#000", fontSize: 12 }]}>Colony Inspection </Text>
+                            <Text style={[styles.text, { color: "#777", fontSize: 9 }]}>An hour ago</Text>
+
+                        </View>
+                        <TouchableOpacity><Text style={[styles.text, { color: "#000", fontSize: 12 }]}>#Hive_Id</Text></TouchableOpacity>
+
+
+                    </View>
+                    <View style={[styles.recentItemContainer, { flexDirection: "row", justifyContent: 'space-evenly' }]}>
+
+                        <Ionicons name='checkmark-done-circle' size={24} color="#000" style={{ marginRight: 5, marginLeft: 0 }}></Ionicons>
+                        <View>
+                            <Text style={[styles.text, { color: "#000", fontSize: 12 }]}>Colony Inspection </Text>
+                            <Text style={[styles.text, { color: "#777", fontSize: 9 }]}>An hour ago</Text>
+
+                        </View>
+                        <TouchableOpacity><Text style={[styles.text, { color: "#000", fontSize: 12 }]}>#Hive_Id</Text></TouchableOpacity>
+
+
+                    </View>
+                    <View style={[styles.recentItemContainer, { flexDirection: "row", justifyContent: 'space-evenly' }]}>
+
+                        <Ionicons name='checkmark-done-circle' size={24} color="#000" style={{ marginRight: 5, marginLeft: 0 }}></Ionicons>
+                        <View>
+                            <Text style={[styles.text, { color: "#000", fontSize: 12 }]}>Colony Inspection </Text>
+                            <Text style={[styles.text, { color: "#777", fontSize: 9 }]}>An hour ago</Text>
+
+                        </View>
+                        <TouchableOpacity><Text style={[styles.text, { color: "#000", fontSize: 12 }]}>#Hive_Id</Text></TouchableOpacity>
+
+
+                    </View>
                 
                     
                 </ScrollView>
@@ -114,7 +145,7 @@ const styles = StyleSheet.create({
         
     },
     add:{
-        backgroundColor:"#41444B",
+        backgroundColor:"#ffd900",
         position:"absolute",
         bottom:16,
         right:0,
@@ -124,7 +155,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         elevation: 15,
-        shadowColor: "#777",
+        shadowColor: "#ffd900",
     },
     infoContainer:{
         alignSelf:"center",
@@ -143,6 +174,8 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         borderRadius:12,
         elevation:5,
+        borderWidth:2,
+        borderColor:"#ffd900"
     
     
 
@@ -155,7 +188,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         elevation: 20,
-        shadowColor: "#777",
+        shadowColor: "#ffd900",
         
     },
     event:{
@@ -168,11 +201,19 @@ const styles = StyleSheet.create({
         
     },
     recentItemContainer: { 
-        alignItems:"flex-start",
+       alignItems:"center",
         backgroundColor:"#fff",
         margin:20,
         marginTop:0,
         elevation:5,
         borderRadius:12,
+        justifyContent:"center",
+        padding:10,
+        borderWidth: 1,
+        borderColor: "#ffd900"
+
+        
+        
+        
     }
 })
